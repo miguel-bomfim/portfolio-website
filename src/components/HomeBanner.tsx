@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 
 interface HomeBannerProps {
@@ -17,7 +19,12 @@ export default function HomeBanner({
         <h1 className="self-end justify-self-center font-sans text-8xl uppercase">
           {title}
         </h1>
-        <p className="self-end justify-self-center">{bottomText}</p>
+        <p
+          onClick={() => window.location.replace('/#mainHome')}
+          className="cursor-pointer self-end justify-self-center text-lg"
+        >
+          {bottomText}
+        </p>
       </div>
       <Image
         src={bgImage}
