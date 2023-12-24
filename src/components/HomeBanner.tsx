@@ -30,7 +30,7 @@ export default function HomeBanner({
         src={bgImage}
         alt="Website introduction banner"
         fill
-        className="-z-10 w-screen object-cover opacity-70"
+        className="-z-10 w-screen object-cover opacity-50"
       />
     </>
   )

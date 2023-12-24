@@ -18,6 +18,9 @@ export const fetchHome = async () => {
               url
             }
             bottomText
+            homePhotos {
+              url
+            }
           }
         }
       `,

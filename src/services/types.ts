@@ -4,4 +4,9 @@ export type HomePageData = {
     url: string
   }
   bottomText: string
+  homePhotos: [
+    {
+      url: string
+    },
+  ]
 }
