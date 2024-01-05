@@ -3,7 +3,8 @@ export type HomePageData = {
   homeBackground: {
     url: string
   }
-  bottomText: string
+  bannerText: string
+  spoilerText: string
   homePhotos: [
     {
       url: string

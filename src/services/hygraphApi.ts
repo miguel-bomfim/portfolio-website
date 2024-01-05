@@ -17,7 +17,8 @@ export const fetchHome = async () => {
             homeBackground {
               url
             }
-            bottomText
+            bannerText
+            spoilerText
             homePhotos {
               url
             }
