@@ -27,15 +27,15 @@ export default async function Home() {
         />
       </header>
 
-      <main id="mainHome" className="mt-10">
+      <section>
         <p>{homeData.spoilerText}</p>
 
-        <ul>
-          <img src={homeData.homePhotos[0].url} alt="" />
-          <img src={homeData.homePhotos[1].url} alt="" />
-          <img src={homeData.homePhotos[2].url} alt="" />
-        </ul>
-      </main>
+        {homeData.homePhotos.map((photo, idx) => {
+          return (
+            <Image width={500} height={500} src={photo.url} alt="" key={idx} />
+          )
+        })}
+      </section>
     </div>
   )
 }
