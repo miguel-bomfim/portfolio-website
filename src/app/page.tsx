@@ -1,3 +1,5 @@
+import './globals.css'
+
 import Image from 'next/image'
 
 import NavBar from '@/components/NavBar'
@@ -27,14 +29,24 @@ export default async function Home() {
         />
       </header>
 
-      <section>
-        <p>{homeData.spoilerText}</p>
+      <section className="spoilerSection">
+        <div className="spoilerWrapSticky">
+          <div className="spoilerWrap">
+            <p>{homeData.spoilerText}</p>
 
-        {homeData.homePhotos.map((photo, idx) => {
-          return (
-            <Image width={500} height={500} src={photo.url} alt="" key={idx} />
-          )
-        })}
+            {homeData.homePhotos.map((photo, idx) => {
+              return (
+                <Image
+                  width={500}
+                  height={500}
+                  src={photo.url}
+                  alt=""
+                  key={idx}
+                />
+              )
+            })}
+          </div>
+        </div>
       </section>
     </div>
   )
