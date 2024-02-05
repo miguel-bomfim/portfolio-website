@@ -1,3 +1,4 @@
+import NavBar from '@/components/NavBar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Roboto_Flex as Roboto } from 'next/font/google'
@@ -20,7 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable}`}>{children}</body>
+      <body className={`${roboto.variable}`}>
+        <NavBar />
+        {children}
+      </body>
     </html>
   )
 }

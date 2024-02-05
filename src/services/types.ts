@@ -11,3 +11,13 @@ export type HomePageData = {
     },
   ]
 }
+
+export type PortfolioData = {
+  slug: string
+  thumbnail: {
+    url: string
+    width: number
+    height: number
+  }
+  title: string
+}

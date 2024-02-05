@@ -2,7 +2,6 @@ import './globals.css'
 
 import Image from 'next/image'
 
-import NavBar from '@/components/NavBar'
 import { fetchHome } from '@/services/hygraphApi'
 
 export default async function Home() {
@@ -10,8 +9,6 @@ export default async function Home() {
 
   return (
     <div>
-      <NavBar />
-
       <header>
         <div className="grid h-screen justify-center">
           <h1 className="self-end justify-self-center font-sans text-8xl uppercase">
