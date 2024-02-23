@@ -1,7 +1,7 @@
 import React from 'react'
 import { fetchPorfolio } from '@/services/hygraphApi'
-import Image from 'next/image'
 import Link from 'next/link'
+import PhotoShootPreview from '@/components/PhotoShootPreview'
 
 export default async function page() {
   const portfolioData = await fetchPorfolio()
@@ -13,13 +13,13 @@ export default async function page() {
           return (
             <li key={idx}>
               <Link href={`/portfolio/${item.slug}`}>
-                <Image
-                  className="pb-4"
-                  width={item.thumbnail.width}
-                  height={item.thumbnail.height}
+                <PhotoShootPreview
                   src={item.thumbnail.url}
+                  title={item.title}
+                  photoWidth={750}
+                  photoHeight={item.thumbnail.height}
                   alt=""
-                />{' '}
+                />
               </Link>
             </li>
           )
