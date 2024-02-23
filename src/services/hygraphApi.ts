@@ -1,4 +1,4 @@
-import { HomePageData, PortfolioData } from './types'
+import { HomePageData, PortfolioData, SinglePortfolioData } from './types'
 
 interface HomeProps {
   data: {
@@ -9,6 +9,12 @@ interface HomeProps {
 interface PortfolioProps {
   data: {
     photographs: PortfolioData[]
+  }
+}
+
+interface SinglePortfolioProps {
+  data: {
+    photograph: SinglePortfolioData
   }
 }
 
@@ -62,4 +68,30 @@ export const fetchPorfolio = async () => {
   const portfolioData: PortfolioProps = await res.json()
 
   return portfolioData.data.photographs
+}
+
+export const fetchSinglePorfolio = async (slug: string) => {
+  const res = await fetch(`${process.env.HYGRAPH_API}`, {
+    method: 'POST',
+    body: JSON.stringify({
+      query: `
+      query SinglePortfolio($slug: String!) {
+        photograph(where: { slug: $slug}) {
+          photos(first: 50) {
+            url
+            id
+            height
+            width
+          }
+        }
+      }        
+      `,
+      variables: {
+        slug,
+      },
+    }),
+  })
+  const singlePortfolio: SinglePortfolioProps = await res.json()
+
+  return singlePortfolio.data.photograph
 }

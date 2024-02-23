@@ -6,10 +6,10 @@ export default function NavBar() {
     <nav className="fixed z-10 flex w-full justify-center">
       <ul className="flex items-center justify-center gap-6 p-6">
         <li>
-          <Link href="portfolio">Portfolio</Link>
+          <Link href="/portfolio">Portfolio</Link>
         </li>
         <li>
-          <Link href="blog">Blog</Link>
+          <Link href="/blog">Blog</Link>
         </li>
       </ul>
     </nav>

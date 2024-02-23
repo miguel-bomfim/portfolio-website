@@ -3,6 +3,7 @@ import './globals.css'
 import Image from 'next/image'
 
 import { fetchHome } from '@/services/hygraphApi'
+import Link from 'next/link'
 
 export default async function Home() {
   const homeData = await fetchHome()
@@ -45,6 +46,12 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      <div className="flex h-[50vh] items-center justify-end pr-28">
+        <Link href="/portfolio">
+          Tudo isso foi uma pequena prévia do que você vai encontrar aqui {'=>'}
+        </Link>
+      </div>
     </div>
   )
 }

@@ -21,3 +21,13 @@ export type PortfolioData = {
   }
   title: string
 }
+
+export type SinglePortfolioData = {
+  photos: [
+    {
+      url: string
+      height: number
+      width: number
+    },
+  ]
+}
