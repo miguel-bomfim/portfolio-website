@@ -1,12 +1,10 @@
 import NavBar from '@/components/NavBar'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Roboto_Flex as Roboto } from 'next/font/google'
+import { Outfit } from 'next/font/google'
 
-const roboto = Roboto({
+const outfit = Outfit({
   subsets: ['latin'],
-  variable: '--font-roboto',
-  weight: '600',
 })
 
 export const metadata: Metadata = {
@@ -21,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable}`}>
+      <body className="font-sans">
         <NavBar />
         {children}
       </body>

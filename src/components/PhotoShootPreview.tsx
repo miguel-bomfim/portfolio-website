@@ -12,7 +12,9 @@ interface PhotoShootType {
 export default function PhotoShootPreview(params: PhotoShootType) {
   return (
     <div className="flex items-center justify-center">
-      <span className="absolute z-10 text-xl text-white">{params.title}</span>
+      <span className="absolute z-10 text-xl font-medium text-white">
+        {params.title}
+      </span>
       <Image
         className="pb-4 brightness-50 transition hover:brightness-100"
         width={params.photoWidth}
