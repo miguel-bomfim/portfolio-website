@@ -38,7 +38,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <div className="flex h-[50vh] items-center justify-end pr-28">
+      <div className="flex h-[50vh] items-center justify-end md:pr-28">
         <Link
           className="flex items-center gap-3 hover:underline"
           href="/portfolio"
