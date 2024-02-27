@@ -4,8 +4,11 @@ import React, { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
+import { useScrollDirection } from '../hooks'
+
 export default function NavBar() {
   const pathname = usePathname()
+  const scrollDirection = useScrollDirection()
 
   useEffect(() => {
     const navElement = document.querySelector('nav')
@@ -22,11 +25,18 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`fixed z-10 flex w-full justify-center duration-200 ${
-        pathname !== '/' && '!bg-white'
-      } `}
+      className={`fixed top-0 z-10 flex w-full justify-center p-5 duration-500
+      ${pathname !== '/' && '!bg-white'}
+      ${scrollDirection === 'down' && pathname !== '/' && '!top-[-5rem]'}
+      `}
     >
-      <ul className="flex items-center justify-center gap-6 p-5">
+      <Link
+        href="/"
+        className="absolute left-9 text-2xl font-bold leading-none"
+      >
+        SH
+      </Link>
+      <ul className="flex items-center justify-center gap-6 ">
         <li className={`${pathname.includes('/portfolio') && 'font-semibold'}`}>
           <Link href="/portfolio">Portfolio</Link>
         </li>

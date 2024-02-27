@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react'
 
 import Image from 'next/image'
+import ArrowRight from './svg/ArrowRight'
 
 export default function HomeBannerComponent({
   title,
@@ -33,12 +34,13 @@ export default function HomeBannerComponent({
   return (
     <header>
       <div className="grid h-screen justify-center">
-        <h1 className="self-end justify-self-center text-8xl font-semibold uppercase">
+        <h1 className="self-end justify-self-center text-9xl font-semibold uppercase">
           {title}
         </h1>
-        <p className="cursor-pointer self-end justify-self-center text-lg">
-          {bannerText}
-        </p>
+        <div className="flex flex-col items-center justify-center gap-2 self-end pb-4">
+          <p className="justify-self-center text-lg">{bannerText}</p>
+          <ArrowRight className="rotate-90" />
+        </div>
       </div>
       <Image
         src={imageSrc}
