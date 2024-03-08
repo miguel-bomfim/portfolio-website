@@ -25,7 +25,7 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`fixed top-0 z-10 flex w-full justify-center p-5 duration-500
+      className={`fixed top-0 z-10 flex w-full justify-center p-5 font-sans duration-500
       ${pathname !== '/' && '!bg-white'}
       ${scrollDirection === 'down' && pathname !== '/' && '!top-[-5rem]'}
       `}
