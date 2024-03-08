@@ -4,6 +4,11 @@ import React, { useEffect } from 'react'
 
 import Image from 'next/image'
 import ArrowRight from './svg/ArrowRight'
+import { Truculenta } from 'next/font/google'
+
+const truculenta = Truculenta({
+  subsets: ['latin'],
+})
 
 export default function HomeBannerComponent({
   title,
@@ -34,7 +39,9 @@ export default function HomeBannerComponent({
   return (
     <header>
       <div className="grid h-screen justify-center">
-        <h1 className="self-end justify-self-center text-2xl font-semibold uppercase md:text-9xl">
+        <h1
+          className={`${truculenta.className} self-end justify-self-center text-2xl font-semibold uppercase md:text-9xl`}
+        >
           {title}
         </h1>
         <div className="flex flex-col items-center justify-center gap-2 self-end pb-4">
