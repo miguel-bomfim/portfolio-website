@@ -1,10 +1,16 @@
 import NavBar from '@/components/NavBar'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Outfit } from 'next/font/google'
+import { Outfit, Truculenta } from 'next/font/google'
 
 const outfit = Outfit({
   subsets: ['latin'],
+  variable: '--font-out',
+})
+
+const truculenta = Truculenta({
+  subsets: ['latin'],
+  variable: '--font-truco',
 })
 
 export const metadata: Metadata = {
@@ -19,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans">
+      <body className={`${outfit.className} ${truculenta.className} font-sans`}>
         <NavBar />
         {children}
       </body>
