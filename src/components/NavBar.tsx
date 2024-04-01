@@ -40,9 +40,6 @@ export default function NavBar() {
         <li className={`${pathname.includes('/portfolio') && 'font-semibold'}`}>
           <Link href="/portfolio">Portfolio</Link>
         </li>
-        <li className={`${pathname.includes('/blog') && 'font-semibold'}`}>
-          <Link href="/blog">Blog</Link>
-        </li>
       </ul>
     </nav>
   )
