@@ -53,7 +53,7 @@ body {
 
 .spoilerWrap {
   height: 100vh;
-  width: 240vmax;
+  width: 270vh;
 
   display: flex;
   padding: 0 64px;
@@ -69,8 +69,3 @@ body {
   animation-range: contain 0% contain 100%;
 }
 
-@media (min-width: 768px) {
-  .spoilerWrap {
-    width: 180vmax;
-  }
-}
