@@ -11,32 +11,22 @@ export default async function Home() {
   const homeData = await fetchHome()
 
   return (
-    <div>
+    <div className="p-2">
       <HomeBannerComponent
         title={homeData.title}
         bannerText={homeData.bannerText}
         imageSrc={homeData.homeBackground.url}
       />
 
-      <section className="spoilerSection">
-        <div className="spoilerWrapSticky">
-          <div className="spoilerWrap">
-            <p className="max-w-md text-xl">{homeData.spoilerText}</p>
+      <div className="flex flex-col gap-2">
+        <p className="max-w-md text-xl">{homeData.spoilerText}</p>
 
-            {homeData.homePhotos.map((photo, idx) => {
-              return (
-                <Image
-                  width={500}
-                  height={500}
-                  src={photo.url}
-                  alt=""
-                  key={idx}
-                />
-              )
-            })}
-          </div>
-        </div>
-      </section>
+        {homeData.homePhotos.map((photo, idx) => {
+          return (
+            <Image width={500} height={500} src={photo.url} alt="" key={idx} />
+          )
+        })}
+      </div>
 
       <div className="flex h-[50vh] items-center justify-end md:pr-28">
         <Link

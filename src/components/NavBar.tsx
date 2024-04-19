@@ -14,6 +14,7 @@ export default function NavBar() {
     const navElement = document.querySelector('nav')
 
     if (navElement) {
+      navElement.style.backgroundColor = 'transparent'
       window.history.pushState({ page: 1 }, '', '')
       window.onpopstate = function (event) {
         if (event) {
