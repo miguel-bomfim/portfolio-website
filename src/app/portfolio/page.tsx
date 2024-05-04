@@ -7,7 +7,7 @@ export default async function page() {
   const portfolioData = await fetchPorfolio()
 
   return (
-    <div className="px-9 py-16">
+    <div className="mt-16 p-2">
       <ul className="md:columns-5">
         {portfolioData.map((item, idx) => {
           return (

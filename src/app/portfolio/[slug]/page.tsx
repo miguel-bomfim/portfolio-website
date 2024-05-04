@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default async function Page({ params }: { params: { slug: string } }) {
   const singlePortfolioData = await fetchSinglePorfolio(params.slug)
   return (
-    <ul className="flex flex-col items-center gap-4">
+    <ul className="mt-16 flex flex-col items-center gap-2">
       {singlePortfolioData.photos.map((photo, idx) => {
         return (
           <li key={idx}>

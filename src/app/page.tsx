@@ -19,7 +19,7 @@ export default async function Home() {
       />
 
       <div className="flex flex-col gap-2">
-        <p className="max-w-md text-xl">{homeData.spoilerText}</p>
+        <p className="max-w-md">{homeData.spoilerText}</p>
 
         {homeData.homePhotos.map((photo, idx) => {
           return (
@@ -34,7 +34,7 @@ export default async function Home() {
           href="/portfolio"
         >
           Tudo isso foi uma pequena prévia do que você vai encontrar aqui
-          <ArrowRight />
+          <ArrowRight className="h-10 w-10" />
         </Link>
       </div>
     </div>
