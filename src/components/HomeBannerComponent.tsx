@@ -3,8 +3,6 @@
 import React from 'react'
 
 import Image from 'next/image'
-import ArrowRight from './svg/ArrowRight'
-import Link from 'next/link'
 
 export default function HomeBannerComponent({
   title,
@@ -26,7 +24,7 @@ export default function HomeBannerComponent({
       </div>
       <Image
         src={imageSrc}
-        alt="Website introduction banner"
+        alt={bannerText}
         fill
         className="-z-10 w-screen object-cover px-2 pt-2 opacity-50"
       />
